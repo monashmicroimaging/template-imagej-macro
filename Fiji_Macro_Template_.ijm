@@ -45,18 +45,9 @@ function processFolder(input) {
 	}
 }
 
-// 
-function processFile(input, output, file) {
-	// Do the processing here by adding your own code.
-	// Leave the print statements until things work, then remove them.
-	filename = input + File.separator + file;
-	print("Processing: " + filename);
-	processFile(filename);
-}
-
-
 // function to process each image series in the file
-function processFile(filename) {
+function processFile(input, output, file) {
+	filename = input + File.separator + file;
 	print("Processing: " + filename);
 	Ext.setId(filename);
 	Ext.getSeriesCount(seriesCount);
